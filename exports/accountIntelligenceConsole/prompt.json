@@ -1,0 +1,31 @@
+{
+  "prompt": "Create a Lightning Web Component mockup for an Account Intelligence Console. It should show account health, open opportunities, recent cases, risk signals, next best actions, related contacts, and an executive summary card. Make it feel like something a Salesforce architect would show to a VP of Sales.",
+  "intent": {
+    "domain": "sales",
+    "targetSurface": "dashboard",
+    "primaryObject": "Account",
+    "relatedObjects": [
+      "Opportunity",
+      "Contact",
+      "Case"
+    ],
+    "userPersona": "executive",
+    "dataNeeds": [
+      "health",
+      "risk",
+      "summary"
+    ],
+    "interactionNeeds": [
+      "create",
+      "next best action"
+    ],
+    "visualTone": "executive"
+  },
+  "selectedVariantId": "variant-01-standard-record-page",
+  "warnings": [],
+  "nextActions": [
+    "Open the executive variant for stakeholder reviews.",
+    "Export the standard record page variant into your DX project under force-app/main/default/lwc.",
+    "Replace mock arrays with real Apex or UI API wires before deployment."
+  ]
+}

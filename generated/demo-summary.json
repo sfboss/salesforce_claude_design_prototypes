@@ -1,0 +1,98 @@
+{
+  "prompt": "Create a Lightning Web Component mockup for an Account Intelligence Console. It should show account health, open opportunities, recent cases, risk signals, next best actions, related contacts, and an executive summary card. Make it feel like something a Salesforce architect would show to a VP of Sales.",
+  "intent": {
+    "domain": "sales",
+    "targetSurface": "dashboard",
+    "primaryObject": "Account",
+    "relatedObjects": [
+      "Opportunity",
+      "Contact",
+      "Case"
+    ],
+    "userPersona": "executive",
+    "dataNeeds": [
+      "health",
+      "risk",
+      "summary"
+    ],
+    "interactionNeeds": [
+      "create",
+      "next best action"
+    ],
+    "visualTone": "executive"
+  },
+  "variantCount": 5,
+  "variants": [
+    {
+      "id": "variant-01-standard-record-page",
+      "label": "Standard Record Page",
+      "componentName": "accountIntelligenceConsoleStandard",
+      "files": [
+        "force-app/main/default/lwc/accountIntelligenceConsoleStandard/accountIntelligenceConsoleStandard.html",
+        "force-app/main/default/lwc/accountIntelligenceConsoleStandard/accountIntelligenceConsoleStandard.js",
+        "force-app/main/default/lwc/accountIntelligenceConsoleStandard/accountIntelligenceConsoleStandard.js-meta.xml",
+        "force-app/main/default/lwc/accountIntelligenceConsoleStandard/accountIntelligenceConsoleStandard.css",
+        "force-app/main/default/lwc/accountIntelligenceConsoleStandard/README.md",
+        "force-app/main/default/lwc/accountIntelligenceConsoleStandard/mockData.json"
+      ]
+    },
+    {
+      "id": "variant-02-console-dense",
+      "label": "Console Dense",
+      "componentName": "accountIntelligenceConsoleDense",
+      "files": [
+        "force-app/main/default/lwc/accountIntelligenceConsoleDense/accountIntelligenceConsoleDense.html",
+        "force-app/main/default/lwc/accountIntelligenceConsoleDense/accountIntelligenceConsoleDense.js",
+        "force-app/main/default/lwc/accountIntelligenceConsoleDense/accountIntelligenceConsoleDense.js-meta.xml",
+        "force-app/main/default/lwc/accountIntelligenceConsoleDense/accountIntelligenceConsoleDense.css",
+        "force-app/main/default/lwc/accountIntelligenceConsoleDense/README.md",
+        "force-app/main/default/lwc/accountIntelligenceConsoleDense/mockData.json"
+      ]
+    },
+    {
+      "id": "variant-03-executive-dashboard",
+      "label": "Executive Dashboard",
+      "componentName": "accountIntelligenceConsoleExecutive",
+      "files": [
+        "force-app/main/default/lwc/accountIntelligenceConsoleExecutive/accountIntelligenceConsoleExecutive.html",
+        "force-app/main/default/lwc/accountIntelligenceConsoleExecutive/accountIntelligenceConsoleExecutive.js",
+        "force-app/main/default/lwc/accountIntelligenceConsoleExecutive/accountIntelligenceConsoleExecutive.js-meta.xml",
+        "force-app/main/default/lwc/accountIntelligenceConsoleExecutive/accountIntelligenceConsoleExecutive.css",
+        "force-app/main/default/lwc/accountIntelligenceConsoleExecutive/README.md",
+        "force-app/main/default/lwc/accountIntelligenceConsoleExecutive/mockData.json"
+      ]
+    },
+    {
+      "id": "variant-04-mobile-card-stack",
+      "label": "Mobile Card Stack",
+      "componentName": "accountIntelligenceConsoleMobile",
+      "files": [
+        "force-app/main/default/lwc/accountIntelligenceConsoleMobile/accountIntelligenceConsoleMobile.html",
+        "force-app/main/default/lwc/accountIntelligenceConsoleMobile/accountIntelligenceConsoleMobile.js",
+        "force-app/main/default/lwc/accountIntelligenceConsoleMobile/accountIntelligenceConsoleMobile.js-meta.xml",
+        "force-app/main/default/lwc/accountIntelligenceConsoleMobile/accountIntelligenceConsoleMobile.css",
+        "force-app/main/default/lwc/accountIntelligenceConsoleMobile/README.md",
+        "force-app/main/default/lwc/accountIntelligenceConsoleMobile/mockData.json"
+      ]
+    },
+    {
+      "id": "variant-05-vibe-coded-premium",
+      "label": "Vibe-Coded Premium",
+      "componentName": "accountIntelligenceConsolePremium",
+      "files": [
+        "force-app/main/default/lwc/accountIntelligenceConsolePremium/accountIntelligenceConsolePremium.html",
+        "force-app/main/default/lwc/accountIntelligenceConsolePremium/accountIntelligenceConsolePremium.js",
+        "force-app/main/default/lwc/accountIntelligenceConsolePremium/accountIntelligenceConsolePremium.js-meta.xml",
+        "force-app/main/default/lwc/accountIntelligenceConsolePremium/accountIntelligenceConsolePremium.css",
+        "force-app/main/default/lwc/accountIntelligenceConsolePremium/README.md",
+        "force-app/main/default/lwc/accountIntelligenceConsolePremium/mockData.json"
+      ]
+    }
+  ],
+  "warnings": [],
+  "nextActions": [
+    "Open the executive variant for stakeholder reviews.",
+    "Export the standard record page variant into your DX project under force-app/main/default/lwc.",
+    "Replace mock arrays with real Apex or UI API wires before deployment."
+  ]
+}

@@ -1,0 +1,44 @@
+<template>
+  <header class="slds-m-bottom_medium">
+    <p class="slds-text-title_caps slds-text-color_weak">Account Intelligence · {account.type}</p>
+    <h1 class="slds-text-heading_large">{account.name}</h1>
+    <p class="slds-text-body_regular slds-text-color_weak">{account.industry} · {account.hqCity} · Owner {account.owner}</p>
+  </header>
+
+  <div class="slds-grid slds-gutters_small slds-wrap">
+    <template for:each={kpis} for:item="k">
+      <div key={k.label} class="slds-col slds-size_1-of-2 slds-large-size_1-of-4 slds-m-bottom_small">
+        <article class="slds-card slds-p-around_medium">
+          <p class="slds-text-title_caps slds-text-color_weak">{k.label}</p>
+          <p class="slds-text-heading_large">{k.value}</p>
+          <p class="slds-text-body_small">{k.delta}</p>
+        </article>
+      </div>
+    </template>
+  </div>
+
+  <div class="slds-grid slds-gutters slds-wrap slds-m-top_medium">
+    <div class="slds-col slds-size_1-of-1 slds-large-size_7-of-12">
+      <article class="slds-card slds-p-around_medium">
+        <h2 class="slds-text-heading_small">Executive Summary</h2>
+        <p class="slds-text-body_regular">{executiveSummary}</p>
+      </article>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-large-size_5-of-12">
+      <article class="slds-card">
+        <header class="slds-card__header"><h2 class="slds-text-heading_small">Recommended Actions</h2></header>
+        <div class="slds-card__body slds-card__body_inner">
+          <ul class="slds-has-dividers_around-space">
+            <template for:each={nextBestActions} for:item="n">
+              <li key={n.title} class="slds-item slds-p-around_small">
+                <p><strong>{n.title}</strong></p>
+                <p class="slds-text-body_small slds-text-color_weak">{n.rationale}</p>
+                <button class="slds-button slds-button_brand" onclick={handleAction}>{n.ctaLabel}</button>
+              </li>
+            </template>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</template>

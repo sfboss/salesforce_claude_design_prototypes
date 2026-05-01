@@ -1,0 +1,13 @@
+{
+  "name": "@lwc-design-studio/variant-engine",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "build": "tsc -p tsconfig.json", "test": "vitest run" },
+  "dependencies": {
+    "@lwc-design-studio/salesforce-intent": "workspace:*",
+    "@lwc-design-studio/slds-patterns": "workspace:*"
+  },
+  "devDependencies": { "typescript": "^5.8.3", "vitest": "^2.1.9" }
+}

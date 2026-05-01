@@ -1,0 +1,34 @@
+<template>
+  <header class="slds-p-around_medium lds-mobile-hero">
+    <p class="slds-text-title_caps">Account</p>
+    <h1 class="slds-text-heading_medium">{account.name}</h1>
+    <p class="slds-text-body_small">{account.industry} · Health {account.healthScore} · {account.riskLevel} risk</p>
+  </header>
+  <div class="slds-p-around_small">
+    <article class="slds-card slds-m-bottom_small slds-p-around_medium">
+      <h2 class="slds-text-heading_small">Today's Focus</h2>
+      <ul class="slds-has-dividers_around-space">
+        <template for:each={nextBestActions} for:item="n">
+          <li key={n.title} class="slds-item slds-p-around_small">
+            <p><strong>{n.title}</strong></p>
+            <p class="slds-text-body_small slds-text-color_weak">{n.rationale}</p>
+            <button class="slds-button slds-button_brand" onclick={handleAction}>{n.ctaLabel}</button>
+          </li>
+        </template>
+      </ul>
+    </article>
+    <article class="slds-card slds-m-bottom_small">
+      <header class="slds-card__header"><h2 class="slds-text-heading_small">Open Opportunities</h2></header>
+      <div class="slds-card__body slds-card__body_inner">
+        <ul class="slds-has-dividers_bottom-space">
+          <template for:each={opportunities} for:item="o">
+            <li key={o.name} class="slds-item slds-p-vertical_x-small">
+              <p><strong>{o.name}</strong></p>
+              <p class="slds-text-body_small slds-text-color_weak">{o.stage} · {o.amount} · {o.probability}%</p>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </article>
+  </div>
+</template>

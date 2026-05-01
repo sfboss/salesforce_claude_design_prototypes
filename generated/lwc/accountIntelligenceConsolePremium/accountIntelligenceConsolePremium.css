@@ -1,0 +1,18 @@
+:host { display: block; }
+.lds-premium-hero {
+  background: linear-gradient(120deg, #032d60, #0b5cab);
+  color: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(3, 45, 96, 0.15);
+}
+.lds-premium-hero h1, .lds-premium-hero p { color: #fff; }
+.lds-glass-card {
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px;
+  padding: 14px;
+  color: #fff;
+}
+.lds-rounded { border-radius: 12px; }

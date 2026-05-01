@@ -1,0 +1,12 @@
+{
+  "name": "@lwc-design-studio/exporters",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "build": "tsc -p tsconfig.json" },
+  "dependencies": {
+    "@lwc-design-studio/variant-engine": "workspace:*"
+  },
+  "devDependencies": { "typescript": "^5.8.3", "@types/node": "^22.15.17" }
+}
